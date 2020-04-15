@@ -1,0 +1,28 @@
+Inscreva-se: http://bit.ly/2HdKDjT
+
+Eventos do WPCF7:
+wpcf7invalid
+wpcf7mailsent
+wpcf7mailfailed
+wpcf7submit
+
+Teste Evento no console:
+document.addEventListener('wpcf7mailsent',function(event){
+  alert("teste ok!");
+  console.log(event);
+}, false );
+
+
+TAG Ouvir Evento:
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+        dataLayer.push({
+          'event' : 'wpcf7mailsent',
+          'CF7formID' : event.detail.contactFormId
+        });
+     }, false );
+
+
+TAG alert:
+alert( "deu certo" );
+
+#googletagmanager #googleanalytics
